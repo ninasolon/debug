@@ -1,0 +1,182 @@
+.home {
+  a {
+    color: $color-link;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    margin: 10px 0;
+    line-height: 1.5rem;
+  }
+
+  .header {
+    .header--dflex {
+      @include flex(center, space-around, row);
+
+      @media (max-width:$tablet-hor){
+        justify-content: space-between;
+      }
+
+      @media (max-width:$tablet-ver){
+        flex-direction: column;
+      }
+
+      .apres--container{
+        width: 42%;
+        background-image: url('../img/bg-code.jpg');
+        background-size: 220%;
+        background-position: right;
+        opacity: .9;
+    
+        @media (max-width:$tablet-ver){
+          background-position: center;
+          width: 100%;
+        }
+
+        .apres--card {
+          margin: 60px auto;
+          margin-right: -80px;
+          width: 72%;
+          text-align: center;
+          background-color: $color-bg;
+          padding: 40px 30px;
+          box-shadow: $box-shadow;
+  
+          @media (max-width:$tablet-hor){
+            width: 90%;
+          }
+  
+          @media (max-width:$tablet-ver){
+            margin: 60px auto;
+            margin-right: auto;
+            width: 60%;
+          }
+  
+          @media (max-width:$mobile){
+            margin: 50px auto;
+            width: 90%;
+            padding: 30px;
+          }
+        
+          .apres--logo{
+            font-family: $font-logo;
+            font-size: 26px;
+          }
+        
+          p{
+            margin-top: 15px;
+  
+            span{
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .busca--container__home{
+        width: 58%;
+        @include flex(center, none, column);
+
+        @media (max-width:$tablet-ver){
+          // background-color: $color-bg;
+          width: 60%;
+          padding: 30px 0;
+          // box-shadow: $box-shadow;
+          margin-top: 20px;          
+        }
+
+        @media (max-width:$mobile){
+          width: 100%;
+        }
+      
+        .busca--campos {
+          @include flex(center, none, column);
+        
+          h3 {
+            margin: 20px;
+          }
+        
+          input {
+            @include formInput(280px, $fsize-input);
+            padding: 5px 15px;
+          }
+        
+          select {
+            @include formInput(280px, $fsize-input);
+            padding: 5px;
+          }
+          
+          .busca--btn {
+            @extend %button;
+          }
+        }
+      }
+    }
+  }
+
+  .conteudo {
+    @include flex(center, space-evenly, row);
+
+    @media (max-width:$tablet-hor){
+      justify-content: space-around;
+    }
+
+    @media (max-width:$tablet-ver){
+      flex-direction: column;
+    }
+
+    .conteudo--container {
+      width: 30%;
+      min-height: 280px;
+      @include flex(center, none, column);
+      position: relative;
+
+      @media (max-width:$tablet-hor){
+        width: 40%;
+      }
+
+      @media (max-width:$tablet-ver){
+        width: 60%;
+      }
+
+      @media (max-width:$mobile){
+        width: 80%;
+      }
+
+      p{
+        @media (max-width:$tablet-ver){
+          text-align: center;
+        }
+      }
+    
+      ul {
+        margin-bottom: 20px;
+
+        li {
+          margin: 5px 0 5px 30px;
+        }
+      }
+    
+      a{
+        margin: 0 auto;
+        position: absolute;
+        bottom: 20px;
+      }
+    
+      .conteudo--dicio{
+        span{
+          color: $color-secondary;
+        }
+      }
+    }
+
+    .conteudo--container + .conteudo--container{
+      @media (max-width:$tablet-ver){
+        margin-top: 30px;
+      }
+    }
+  }
+}

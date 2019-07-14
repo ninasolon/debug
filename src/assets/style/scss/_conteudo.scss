@@ -1,0 +1,87 @@
+.artigo{
+  margin-bottom: 60px;
+
+  .artigo--format{
+    margin: 40px 0;
+    font-family: $font-article;
+  
+    p {
+      margin: 20px 0;
+      line-height: 1.5rem;
+    }
+  
+    h2{
+      margin-bottom: 40px;
+    }
+  
+    h3{
+      margin: 30px 0;
+    }
+  
+    h4{
+      margin-top: 40px;
+      font-size: $fsize-article-subtitle;
+    }
+  
+    pre{
+      margin: 30px 40px;
+      padding: 20px;
+      background-color: $color-bg-code;
+      line-height: 1.25rem;
+    }
+  
+    figure{
+      margin: 30px 0;
+      text-align: center;
+  
+      img {
+        width: 80%;
+
+        @media (max-width:$tablet-ver){
+          width: 100%;
+        }
+      }
+  
+      figcaption{
+        font-size: $fsize-input;
+        font-style: italic;
+      }
+    }
+  
+    li{
+      margin: 20px;
+    }
+  
+    a{
+      text-decoration: underline;
+    }
+    
+    a:hover{
+      color: $color-link;
+    }
+  }
+}
+
+.link--voltar{
+  color: $color-link;
+}
+
+.link--voltar:hover{
+  text-decoration: underline;
+  color: $color-link;
+}
+
+.link--topo{
+  @include flex(center, unset, row);
+  color: $color-link;
+
+  i{
+    font-size: 32px;
+    margin-right: 5px;
+  }
+}
+
+.link--topo:hover{
+  color: $color-title;
+}
+

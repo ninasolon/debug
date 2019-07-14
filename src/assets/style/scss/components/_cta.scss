@@ -1,0 +1,38 @@
+.call-to-action{
+  color: firebrick;
+
+  p{
+    margin: 10px 0;
+    font-size: 15px;
+    line-height: 1.5rem;
+
+    span{
+      font-weight: bold;
+    }
+  }
+
+  a{
+    font-style: italic;
+  }
+}
+
+.cta--dicio, .cta--docs{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cta--docs{
+  margin-top: 60px;
+}
+
+.cta--textos{
+  text-align: left;
+
+  p {
+    margin: 5px 0;
+  }
+
+  h4 {
+    margin-top: 20px;
+  }
+}

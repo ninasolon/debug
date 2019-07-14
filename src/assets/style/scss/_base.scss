@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $fsize-default;
+
+  h1 {
+    font-family: $font-logo;
+    font-size: $fsize-logo;
+  }
+  
+  h2 {
+    @include title($color-title)
+  }
+  
+  h3 {
+    @include title($color-primary)
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  // section, header {
+  section{
+    padding: 60px 0;
+
+    @media (max-width:$mobile){
+    padding: 45px 0;
+    }
+  }
+  
+  .container {
+    @include container(75%);
+
+    @media (max-width:$tablet-ver){
+      width: 90%;
+    }
+  }
+  
+  .small-container {
+    @include container(60%);
+
+    @media (max-width:$tablet-ver){
+      width: 90%;
+    }
+  }
+
+  .page-container{
+    padding: 40px 0;
+  }
+  
+  .header-img {
+    height: 150px;
+    background-image: url('../img/bg-code.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(60%);
+    opacity: .4;
+
+    @media (max-width:$mobile){
+      background-size: 250%;
+      background-position: top;
+    }
+  }
+  
+  input:focus, select:focus, button:focus {
+    outline: 0;
+  }
+}

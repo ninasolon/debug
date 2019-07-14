@@ -1,0 +1,68 @@
+.nav {
+  @include container(75%);
+  @include flex(center, space-between, row);
+  background-color: $color-bg;
+  padding: 18px 0;
+
+  p{
+    @media (max-width:$mobile){
+      font-size: $fsize-smaller;
+    }
+  }
+
+  .navmenu{
+    p {
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 10px;
+    }
+
+    @media (max-width:$tablet-ver){
+      display: none;
+    }
+  
+    .navmenu--link:hover{
+      color: $color-link;
+    }
+  
+    .navmenu--colabore{
+      color: $color-link;
+    }
+  
+    .navmenu--colabore:hover{
+      color: $color-title;
+      font-weight: bold;
+    }
+  }
+
+  .navmenu--hamburguer {
+    display: none;
+    font-size: 36px;
+    color: $color-bg-footer;
+
+    @media (max-width:$tablet-ver){
+      display: block;
+    }
+  }
+}
+
+.dropdown {
+  display: block;
+  font-size: 20px;
+  list-style: none;
+  text-align: right;
+
+  .dropdown--link {
+    padding: 10px 0;
+  }
+
+  .dropdown--colabore{
+    color: $color-link;
+    padding: 10px 0 20px 0;
+  }
+}
